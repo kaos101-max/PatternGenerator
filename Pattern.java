@@ -14,7 +14,21 @@ public class Pattern{
         stars++;
         }
     }
-    public static void triangle(int rows){}
+    public static void triangle(int rows){
+    int num = 1;
+    for (int 1 = rows
+    }
+    public static void odds(int start){
+    int num1 = 9;
+    for (int 1 = )
+    }
+    public static void eo(int maxE){
+
+    }
+    public static void pyramid(int rows){
+
+    }
+
 
 
 
