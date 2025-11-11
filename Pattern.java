@@ -9,17 +9,23 @@ public class Pattern{
     }
     public static void stars(int rows){
         //code goes here
-        int stars =0;
+        int stars = 0;
         String output = "*";
         while (stars < rows){
         System.out.println(output);
-        output= output+"**";
+        output = output+"**";
         stars++;
         }
     }
+    // public static void main(String[] args){
+    //     num (9);
     // public static void triangle(int rows){
     //     int num = 1;
-    //     for (int 1 = rows
+    //     int output1 = "1"
+    //     while (num < rows){
+    //     System.out.println(outpu1);
+    //     output1 = output1+"2";
+    
     // }
     // public static void odds(int start){
     //     int num1 = 9;
