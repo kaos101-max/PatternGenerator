@@ -6,7 +6,8 @@ public class Pattern{
     //postcondition
     public static void main(String[] args){
         stars(7);
-        triangle(9);
+        // triangle(9);
+        odds(9);
     }
     public static void stars(int rows){
         //code goes here
@@ -19,18 +20,35 @@ public class Pattern{
         }
     }
  
-    public static void triangle(int rows){
-        int triangle = 0;
-        int output1 = 1;
-        while (triangle > rows){
-        System.out.println(output1);
-        output1 = output1+2;
-        }
-    }
-    // public static void odds(int start){
-    //     int num1 = 9;
-    //     for (int 1 =  
+    // public static void triangle(int rows){
+    //     int trangle = 1;
+    //     while (rows < 0){
+    //     int output = num;
+    //     do{
+    //         System.out.println(num);
+    //         output--;
+    //     } while (output > 0);
+    //     System.out.println("");
+    //         num += 1;
+    //     }
     // }
+    public static void odds(int start){
+        // for loop
+        int ratio = start;
+        int num = start;
+        for (int i = start; i > 0; i--) {
+            ratio = num;
+            if (i % 2 == 1) {
+                do {
+                    System.out.print(i);
+                    ratio--;
+                } while (ratio > 0);
+                System.out.println("");
+            }
+            num--;
+        }
+        
+    }
     // public static void eo(int maxE){
 
     // }
