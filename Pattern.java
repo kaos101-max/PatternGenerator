@@ -5,14 +5,14 @@ public class Pattern{
     //precondtion
     //postcondition
     public static void main(String[] args){
-        // stars(7);
-        // triangle(9);
-        // odds(9);
+        stars(7);
+        triangle(9);
+        odds(9);
         eo(5);
-        // pyramid(5);
+        pyramid(5);
     }
     public static void stars(int rows){
-        // while loop
+    //precon: It must have the output of the star
         int stars = 0;
         String output = "*";
         while (stars < rows){
@@ -21,25 +21,24 @@ public class Pattern{
         stars++;
         }
     }
- 
+    //postcon: It results two more stars being added on each layer
     public static void triangle(int rows){
-        //while loop
-        int counts = rows;
-        int num = rows;
-        for (int i = rows; i > 0; i--) {
-            counts = num;
-            if (i % 2 == 1) {
-                do {
-                    System.out.print(i);
-                    counts--;
-                } while (counts > 0);
-                System.out.println("");
-            }
-            num--;
+    //precon: It must start by a first number.
+        int num = 1;
+        while (rows > 0) {
+            int counts = num;
+            do {
+                System.out.print(num);
+                counts--;
+            } while (counts > 0);
+            rows--;
+            System.out.println("");
+            num += 1;
         }
     }
+    //postcon: The lowest number gets higher and adds one more nummber each.
     public static void odds(int start){
-        // for loop
+    //precon: The must start by a highest odd number under 10
         int ratio = start;
         int num = start;
         for (int i = start; i > 0; i--) {
@@ -55,32 +54,47 @@ public class Pattern{
         }
         
     }
+    //postcon: The highest odd numbers get lower and loses one number each
     public static void eo(int maxE){
-        //E
-        //O
-        //EE
-        //O
+    //E,O,EE,OO
+    //precon: It creates layers of numbers if its 'E' or 'O' first.
+        int transcribe = 1;
+        int depot;
         String letter = "E";
-        if(maxE%2==0){
-            letter = "O";
-        }
-        for(int i = 0; i < maxE; i++){
-            //another loop here
-            if (i%2 == 1){
-                
-            }
-            System.out.println(letter);
-            
-            if(letter.equals("E")){
+        for (int i = maxE; i > 0; i--) {
+            depot = transcribe;
+            if (i % 2 == 1) {
+                letter = "E";
+            } else {
                 letter = "O";
             }
-            else{
+            do {
+                System.out.print(letter);
+                depot--;
+            } while (depot > 0);
+            System.out.println("");
+            transcribe += 1;
+        }
+        transcribe -= 2;
+        maxE--;
+        for (int i = maxE; i > 0; i--) {
+            depot = transcribe;
+            if (i % 2 == 1) {
                 letter = "E";
+            } else {
+                letter = "O";
             }
+            do {
+                System.out.print(letter);
+                depot--;
+            } while (depot > 0);
+            System.out.println("");
+            transcribe -= 1;
         }
     }
+    //postcon: it creates layers of letters. 'E' first, then 'O'
     public static void pyramid(int rows){
-        // while loop
+    //precon: It'll run to create and upside-down triangle
         int num = 1;
         int counts = rows * 2 - 1;
         while (rows > 0) {
@@ -99,4 +113,5 @@ public class Pattern{
             rows--;
         } 
     }
+    //postcon: '1' had most digits than '5'
 }
